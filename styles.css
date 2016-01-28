@@ -1,0 +1,16 @@
+body {
+  background: #ddd repeat top center;
+  font-family: sans-serif;
+}
+
+section {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.4);
+  box-sizing: border-box;
+}
+
