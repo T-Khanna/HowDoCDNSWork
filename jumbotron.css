@@ -3,3 +3,24 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+#jumbo {
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+#jumbo .container {
+    color: #fff;
+    text-shadow: 0 0px 5px rgba(0,0,0,.5);
+}
+
+video {
+    float: left;
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
