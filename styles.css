@@ -1,16 +1,45 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  background: #ddd repeat top center;
-  font-family: sans-serif;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
-section {
-  width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0,0,0,.4);
-  box-sizing: border-box;
+#jumbo {
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
 }
 
+#jumbo .container {
+    color: #fff;
+    text-shadow: 0 0px 5px rgba(0,0,0,.5);
+}
+
+video {
+    float: left;
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.flag {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  vertical-align: top;
+  margin-right: 10px;
+  box-shadow: 0px -1px 0 rgba(0,0,0,.2);
+}
+
+.flag img {
+  position: absolute;
+  top: 0;
+  left: -6px;
+  height: 24px;
+}
