@@ -1,0 +1,25 @@
+body {
+	text-align: center;
+	background-color: violet;
+	color: white;
+	animation: bitch 5s linear infinite;
+}
+a{
+	color: blue;
+}
+
+* {
+		animation: bitch 10s linear infinite;
+}
+
+@keyframes bitch {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
