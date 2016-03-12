@@ -59,20 +59,85 @@
       </div>
     </nav>
 
-     <div class="container">
+    <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
           <h2 align="center">Request Routing Systems</h2>
           <br>
-          <p> </p>
-          <hr>
-          <h3 align="center">Diagram of the request routing system</h3>
-          <br>
-          <p style="text-align:center"> <img src="assets/img/cdn_request_routing.JPG" width="800"> </p>
+          <p style="text-align:center"> <img src="assets/img/cdn_request_routing.JPG" width="700"> </p>
+          <p>The above image<sup><a href="#fn1" id="ref1">(1)</a></sup> shows the general reqeust routing system. The main part of the system that differs between content distribution networks is the <strong>selection algorithm</strong>. As implied by the name, this decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two general schemes:
+            <ol>
+              <li>Active Schemes (with per-request monitoring).
+              <li>Passive Schemes (with routing tables).
+            </ol>
+          </p>
           <hr>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3 align="center">Active Scheme Routing</h3>
+          <br>
+          <p>In Active Schemes, with active request routing, each initial end user request for a live or VOD stream is sent to a pool of request routers. These routers analyse each individual request. Over a dozen parameters are checked:
+          <ul>
+            <li> Where are you? 
+            <li> Does this content exist? 
+            <li> Which delivery node has the best score to deliver this content for you? 
+          </ul>
+          These examples of parameters are only to name a few. All these parameters are checked within the space of a millisecond.<sup><a href="#fn2" id="ref2">(2)</a></sup> This form of routing is not very common in Internet Architecture as it is less efficient and provides no significant benefit when compared to Passive Scheme Routing.
+          </p>
+          <hr>
+        </div>
+
+        <div class="col-md-12">
+          <h3 align="center">Passive Scheme Routing</h3>
+          <br>
+          <p>Passive Schemes involve using a table which maps each request sent by a user to the appropriate surrogate server. There is no evaluation of the parameters mentioned in active schemes. An example of the mappings in a routing table is shown below.<sup><a href="#fn3" id="ref3">(3)</a></sup>
+          <br> <br>
+          <table border="1" width="400" align="center">
+            <tr>
+              <th>Client Location</th>
+              <th>Surrogate Server</th>
+            </tr>
+            <tr>
+              <td>America</td>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td>Europe</td>
+              <td>Paris</td>
+            </tr>
+            <tr>
+              <td>Africa</td>
+              <td>Paris</td>
+            </tr>
+            <tr>
+              <td>Asia</td>
+              <td>New Delhi</td>
+            </tr>
+          </table>
+          <br>
+          So, in this example, if the client location was America, the mapping in the passive scheme table would choose the surrogate server in New York. </p>
+          <p>In the context of the Internet, requests are identified by their IP addresses. As such, this scheme is favoured over the active scheme for the Internet. Trying to implement an active web-based CDN introduces a large number of parameters to think about, especially if the parameters have to be able to cover the internet. As such, the drect mapping from client location to surrogate server is preferred as it reduces the complexity of the system.</p>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <!-- References -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ol id="reflist">
+            <li id="fn1">Mukaddim Pathan.<i>Content Delivery Network (CDN) Research Directory</i> Available from: http://www.cloudbus.org/cdn/RD/CDNs.html. [Accessed: 7th March 2016].
+            <li id="fn2">Stef Van Der Ziel. <i>Multi CDN: Active Request Routing</i>. Available from: https://www.streamzilla.com/multi-cdn-active-request-routing. [Accessed: 10th March 2016].
+            <li id="fn3">Dinesh C. Verma. Selecting the Right Site in a CDN <b>In:</b> <i>Content Distribution Networks – An Engineering Approach</i>. Wiley Interscience. 2002.
+          </ol>  
+        </div>
+      </div>
+    </div>
 
       <!-- Bootstrap core JavaScript
     ================================================== -->
