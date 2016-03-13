@@ -110,15 +110,15 @@ figcaption {
 }
 
 ol {
-    counter-reset: item;
+  counter-reset: item;
 }
 
 ol > li {
-    counter-increment: item;
+  counter-increment: item;
 }
 
 ol ol > li {
-    display: block;
+  display: block;
 }
 
 ol ol {
@@ -126,5 +126,5 @@ ol ol {
 }
 
 ol ol > li:before {
-    content: counters(item, ".") ". ";
+  content: counters(item, ".") ". ";
 }

@@ -118,22 +118,6 @@
           </ol>  
         </div>
       </div>
-
-<hr>
-
-      <footer>
-        <p>
-          <a href="http://imperial.ac.uk" class="pull-left"><img src="assets/img/iclogo.jpg" alt="Imperial College London logo" /></a>
-          <div class="pull-right text-right">
-            First Year Computing Topics Project at <a href="http://www.doc.ic.ac.uk" target="_blank">Imperial College London</a><br />
-            Contributed to by <a href="http://thomasbower.net" target="_blank" rel="author">Thomas Bower</a>, 
-                              <a href="http://www.doc.ic.ac.uk/~tk915/"  target="_blank" rel="author">Tanmay Khanna</a>, 
-                              <a href="http://www.doc.ic.ac.uk/~ay1013/" target="_blank" rel="author">Ali Yepifanova</a>, 
-                          and <a href="http://www.doc.ic.ac.uk/~mz4615/" target="_blank" rel="author">Michelle Zhao</a>
-          </div>
-        </p>
-      </footer>
-
     </div>
       
           <!-- Bootstrap core JavaScript

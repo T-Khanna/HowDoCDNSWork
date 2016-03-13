@@ -86,36 +86,36 @@
 
             <ol>
               <li>
-                Introduction
+                <a href="#">Introduction</a>
                 <ol>
-                  <li>History of CDNs</li>
-                  <li>Pros and Cons of CDNs</li>
-                  <li>CDN Alternatives</li>
+                  <li><a href="#">History of CDNs</a></li>
+                  <li><a href="#">Pros and Cons of CDNs</a></li>
+                  <li><a href="#">CDN Alternatives</a></li>
                 </ol>
               </li>
               <li>
-                Architecture
+                <a href="#">Architecture</a>
                 <ol>
-                  <li>Components</li>
-                  <li>Request Routing</li>
+                  <li><a href="#">Components</a></li>
+                  <li><a href="#">Request Routing</a></li>
                 </ol>
               </li>
               <li>
-                Deployment History
+                <a href="#">Deployment History</a>
                 <ol>
-                  <li>more of alis</li>
-                  <li>stuff can go</li>
-                  <li>in this area</li>
+                  <li><a href="#">more of alis</a></li>
+                  <li><a href="#">stuff can go</a></li>
+                  <li><a href="#">in this area</a></li>
                 </ol>
               </li>
               <li>
-                Topology
+                <a href="#">Topology</a>
                 <ol>
-                  <li>some stuff</li>
-                  <li>can go here</li>
+                  <li><a href="#">some stuff</a></li>
+                  <li><a href="#">can go here</a></li>
                 </ol>
               </li>
-              <li>About Us</li>
+              <li><a href="#">About Us</a></li>
             </ol>
 
           </p>
