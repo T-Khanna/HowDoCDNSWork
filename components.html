@@ -71,9 +71,8 @@
             <sup><a href="#fn1" id="ref1">(1)</a></sup>
 
           This relates to the topology discussion within CDN techonology, which is a major architectural question when developing a CDN service.
-
           <br> <br>
-          In order to minimise the Round-Trip Time, every CDN at least has these components in place:
+          In order to minimise the Round-Trip Time, every CDN has at least these components in place:
             <ul> 
               <li> Origin Server
               <li> Surrogate (Edge) Servers 
@@ -83,22 +82,35 @@
           <hr>
           <h3>Origin Server</h3>
           <p>This is simply the server which originally contained the information the user is trying to access. The information from here is replicated into the CDN's surrogate/edge cache servers.<sup><a href="#fn2" id="ref2">(2)</a></sup> The image below demonstrates how the process works.<sup><a href="#fn3" id="ref3">(3)</a></sup></p>
-          <br> <br>
+          <br>
           <p style="text-align:center"> <img src="assets/img/originserver.png" width="600"> </p>
           <br>
-          <p>When the first request for the file <strong>foo.png</strong> is sent, the request is first sent through the surrogate server. However, the surrogate server currently does not contain the file <strong>foo.png</strong>, so the request is pushed to the origin server. The file <strong>foo.png</strong> is retrieved and sent back to the user, storing the data for the file in the surrogate server in the process. Due to the caching that occurs, the second and subsequent requests for the same file will stop and retrieve the cached image from the surrogate server.</p>
+          <p>When the first request for the file <strong>foo.png</strong> is sent, the request is first sent through the surrogate server. However, the surrogate server currently does not contain the file <strong>foo.png</strong>, so the request is pushed to the origin server. The file <strong>foo.png</strong> is retrieved and sent back to the user, storing the data for the file in the surrogate server in the process. Due to the caching that occurs, the second and subsequent requests for the same file will stop and retrieve the cached image from the surrogate server.<sup><a href="#fn3" id="ref3">(3)</a></p>
           <hr>
           <h3>Surrogate Servers</h3>
-          <p> </p>
+          <p>These are the servers which stores the data accessed from the first request to the origin server. Sometimes called as edge servers, they are used as an alternative for users to access their data, as sending requests to the origin server from all over the world would prove to be problematic. As such, these are used to 'improve user experience and lower transmission costs.'<sup><a href="#fn3" id="ref3">(3)</a></sup> How they are used when processing requests can be seen above in the image illustrating the process of requesting the file <strong>foo.png</strong>.</p>
           <hr>
           <h3>Request Routing</h3>
-          <p>A request routing mechanism is used to direct the user's request to a surrogate server, or a set of surrogate servers, to provide that content.<sup><a href="#fn4" id="ref4">(4)</a></sup> For more information on Request Routing, <a href="requestrouting.html">click here</a></p>
+          <p>A request routing mechanism is used to direct the user's request to the surrogate server, or set of servers, which is closest to the location of the user. This allows the user to obtain the requested content in minimal time.<sup><a href="#fn4" id="ref4">(4)</a></sup> This is the method used to send the request to the surrogate server, if the server has the data from the origin server. For more information on Request Routing, <a href="requestrouting.html">click here</a></p>
           <hr>
-
-
         </div>
       </div>
+    </div>
 
+    <!-- References -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ol id="reflist">
+            <li id="fn1">Anon. CDN Infrastructure. Available from: https://www.incapsula.com/cdn-guide/cdn-architecture.html. [Accessed: 15th February 2016].
+            <li id="fn2">Mukaddim Pathan. Content Delivery Network (CDN) Research Directory. Available from: http://www.cloudbus.org/cdn/RD/CDNs.html. [Accessed: 1st March 2016].
+            <li id="fn3">Nicholas C. Zakas. How content delivery networks (CDNs) work. Available from: https://www.nczonline.net/blog/2011/11/29/how-content-delivery-networks-cdns-work/. [Accessed: 17th February 2016].
+            <li id="fn4">A. Barbir, et al. Known Content Network (CN) Request-Routing Mechanisms. Available from: https://tools.ietf.org/html/rfc3568. [Accessed: 25th February 2016].
+          </ol>  
+        </div>
+      </div>
+    </div>
+      
           <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
