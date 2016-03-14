@@ -79,7 +79,7 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <p>The image <a href="components.html#cdnservers">here</a> shows the general reqeust routing system. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em>. This is not shown in the diagram but it is integral to the design of a CDN. As implied by the name, the selection algorithm decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two schemes:
+          <p>The image <a href="components.html#cdnservers">here</a> (click on the image to return back to this page) shows the general request routing system. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em>. This is not shown in the diagram but it is integral to the design of a CDN. As implied by the name, the selection algorithm decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two schemes:
             <ol>
               <li>Active Schemes (with per-request monitoring).
               <li>Passive Schemes (with routing tables).
@@ -208,7 +208,7 @@
           </table>
           <br>
           So, in this example, if the client location was America, the mapping in the passive scheme table would choose the surrogate server in New York. </p>
-          <p>In the context of the Internet, requests are identified by their IP addresses. As such, this scheme is favoured over the active scheme for the Internet. Trying to implement an active web-based CDN introduces a large number of parameters to think about, especially if the parameters have to be able to cover the internet. As such, the drect mapping from client location to surrogate server is preferred as it reduces the complexity of the system.</p>
+          <p>In the context of the Internet, requests are identified by their IP addresses. As such, this scheme is favoured over the active scheme for the Internet. Trying to implement an active web-based CDN introduces a large number of parameters to think about, especially if the parameters have to be able to cover the internet. As a result, the direct mapping from client location to surrogate server is preferred as it reduces the complexity of the system.</p>
           <hr>
         </div>
       </div>
