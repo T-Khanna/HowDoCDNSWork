@@ -26,7 +26,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -35,27 +35,34 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">How CDNs Work</a>
+          <a class="navbar-brand" href="index.html">How CDNs Work</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.html">Home</a></li>
-            
+            <li><a href="history.html">History</a></li>
             <!-- Dropdown menu for my webpages -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
-              aria-expanded="false">Architecture<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Architecture<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="components.html">Components</a></li>
-                <li><a href="#">Request Routing</a></li>
+                <li><a href="requestrouting.html">Request Routing</a></li>
               </ul>
             </li>
 
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Here</a></li>
-            <li><a href="#">About</a></li>
+            <!-- Dropdown menu for my webpages -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Topology<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="whatistopology.html">What is Topology?</a></li>
+                <li><a href="cdntopology.html">CDN Topology</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">About Us</a></li>
           </ul>
-        </div>
+        </div><!-- /.navbar-collapse -->
       </div>
     </nav>
 
@@ -99,7 +106,7 @@
           <h3>Passive Scheme Routing</h3>
           <p>Passive Schemes involve using a table which maps each request sent by a user to the appropriate surrogate server. There is no evaluation of the parameters mentioned in active schemes. An example of the mappings in a routing table is shown below<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
           <br>
-          <table align="center">
+          <table align="center" class="table">
             <tr>
               <th>Client Location</th>
               <th>Surrogate Server</th>
@@ -139,6 +146,14 @@
             <li id="fn2">Stef Van Der Ziel. <em>Multi CDN: Active Request Routing</em>. Available from: <a href="https://www.streamzilla.com/multi-cdn-active-request-routing" target="_blank">https://www.streamzilla.com/multi-cdn-active-request-routing</a>. [Accessed: 10th March 2016].
             <li id="fn3">Dinesh C. Verma. Selecting the Right Site in a CDN <strong>In:</strong> <em>Content Distribution Networks – An Engineering Approach</em>. Wiley Interscience. 2002.
           </ol>  
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+
+          <p>This page was written by Tanmay Khanna.</p>
         </div>
       </div>
 

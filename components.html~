@@ -26,7 +26,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,23 +39,30 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-            
+            <li><a href="#">Home</a></li>
+            <li><a href="history.html">History</a></li>
             <!-- Dropdown menu for my webpages -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                  Architecture<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Components</a></li>
+                <li><a href="components.html">Components</a></li>
                 <li><a href="requestrouting.html">Request Routing</a></li>
               </ul>
             </li>
 
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Here</a></li>
-            <li><a href="#">About</a></li>
+            <!-- Dropdown menu for my webpages -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Topology<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="whatistopology.html">What is Topology?</a></li>
+                <li><a href="cdntopology.html">CDN Topology</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">About Us</a></li>
           </ul>
-        </div>
+        </div><!-- /.navbar-collapse -->
       </div>
     </nav>
 
@@ -111,13 +118,37 @@
         <div class="col-md-12">
           <h3>References</h3>
           <ol id="reflist">
-            <li id="fn1">Anon. CDN Infrastructure. Available from: https://www.incapsula.com/cdn-guide/cdn-architecture.html. [Accessed: 15th February 2016].
-            <li id="fn2">Mukaddim Pathan. Content Delivery Network (CDN) Research Directory. Available from: http://www.cloudbus.org/cdn/RD/CDNs.html. [Accessed: 1st March 2016].
-            <li id="fn3">Nicholas C. Zakas. How content delivery networks (CDNs) work. Available from: https://www.nczonline.net/blog/2011/11/29/how-content-delivery-networks-cdns-work/. [Accessed: 17th February 2016].
-            <li id="fn4">A. Barbir, et al. Known Content Network (CN) Request-Routing Mechanisms. Available from: https://tools.ietf.org/html/rfc3568. [Accessed: 25th February 2016].
+            <li id="fn1">Anon. <em>CDN Infrastructure</em>. Available from: <a href="https://www.incapsula.com/cdn-guide/cdn-architecture.html" target="_blank">https://www.incapsula.com/cdn-guide/cdn-architecture.html</a>. [Accessed: 15th February 2016].
+            <li id="fn2">Mukaddim Pathan. <em>Content Delivery Network (CDN) Research Directory</em>. Available from: <a href="http://www.cloudbus.org/cdn/RD/CDNs.html" target="_blank">http://www.cloudbus.org/cdn/RD/CDNs.html</a>. [Accessed: 1st March 2016].
+            <li id="fn3">Nicholas C. Zakas. <em>How content delivery networks (CDNs) work</em>. Available from: <a href="https://www.nczonline.net/blog/2011/11/29/how-content-delivery-networks-cdns-work/" target="_blank">https://www.nczonline.net/blog/2011/11/29/how-content-delivery-networks-cdns-work/</a>. [Accessed: 17th February 2016].
+            <li id="fn4">A. Barbir, et al. <em>Known Content Network (CN) Request-Routing Mechanisms</em>. Available from: <a href="https://tools.ietf.org/html/rfc3568" target="_blank">https://tools.ietf.org/html/rfc3568</a>. [Accessed: 25th February 2016].
           </ol>  
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+
+          <p>This page was written by Tanmay Khanna.</p>
+        </div>
+      </div>
+
+<hr>
+
+      <footer>
+        <p>
+          <a href="http://imperial.ac.uk" class="pull-left"><img src="assets/img/iclogo.jpg" alt="Imperial College London logo" /></a>
+          <div class="pull-right text-right">
+            First Year Computing Topics Project at <a href="http://www.doc.ic.ac.uk" target="_blank">Imperial College London</a><br />
+            Contributed to by <a href="http://thomasbower.net" target="_blank" rel="author">Thomas Bower</a>, 
+                              <a href="http://www.doc.ic.ac.uk/~tk915/"  target="_blank" rel="author">Tanmay Khanna</a>, 
+                              <a href="http://www.doc.ic.ac.uk/~ay1013/" target="_blank" rel="author">Ali Yepifanova</a>, 
+                          and <a href="http://www.doc.ic.ac.uk/~mz4615/" target="_blank" rel="author">Michelle Zhao</a>
+          </div>
+        </p>
+      </footer>
+
     </div>
       
           <!-- Bootstrap core JavaScript

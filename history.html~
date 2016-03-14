@@ -26,7 +26,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -35,12 +35,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">How CDNs Work</a>
+          <a class="navbar-brand" href="index.html">How CDNs Work</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
             <!-- Dropdown menu for my webpages -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -48,25 +48,19 @@
               <ul class="dropdown-menu">
                 <li><a href="components.html">Components</a></li>
                 <li><a href="requestrouting.html">Request Routing</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
               </ul>
             </li>
 
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Here</a></li>
-            <li><a href="#">About</a></li>
-            <!--<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <!-- Dropdown menu for my webpages -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Topology<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="whatistopology.html">What is Topology?</a></li>
+                <li><a href="cdntopology.html">CDN Topology</a></li>
               </ul>
-            </li>-->
+            </li>
+            <li><a href="aboutus.html">About Us</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -128,7 +122,7 @@
         <div class="col-md-12">
           <hr>
 
-          <p>Images from <a href="http://openclipart.org/" target="_blank">http://openclipart.org</a>, sourced from the public domain.</p>
+          <p>Images from <a href="http://openclipart.org/" target="_blank">http://openclipart.org</a>, sourced from the public domain. This page was written by Ali Yepifanova.</p>
         </div>
       </div>
 

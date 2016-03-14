@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Content Distribution Networks</title>
+    <title>Introduction &mdash; How CDNs Work</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -35,12 +35,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">How CDNs Work</a>
+          <a class="navbar-brand" href="index.html">How CDNs Work</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
             <!-- Dropdown menu for my webpages -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -48,104 +48,104 @@
               <ul class="dropdown-menu">
                 <li><a href="components.html">Components</a></li>
                 <li><a href="requestrouting.html">Request Routing</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
               </ul>
             </li>
 
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Here</a></li>
-            <li><a href="#">About</a></li>
-            <!--<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <!-- Dropdown menu for my webpages -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Topology<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="whatistopology.html">What is Topology?</a></li>
+                <li><a href="cdntopology.html">CDN Topology</a></li>
               </ul>
-            </li>-->
+            </li>
+            <li><a href="aboutus.html">About Us</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" id="jumbo">
-<video autoplay loop muted>
+      <video autoplay loop muted>
                 <source src="assets/video/ethernet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
             </video>
       <div class="container">
         <h1>Content Distribution Networks</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <p>Content Distribution Networks are a vital part of the modern internet, and have paved the way for modern web services. Please enjoy our website and read more to find out more.</p>
+        <p><a class="btn btn-primary btn-lg" href="#intro" role="button">Read more &raquo;</a></p>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="intro">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <h2>About Us</h2>
-          <p>Morbi iaculis nunc sit amet lectus malesuada vestibulum. Praesent vulputate justo non elementum molestie.</p>
+          <h2 align="center">Introduction</h2>
+
+          <p>
+          <strong><em>Content Delivery (or Distribution) Networks</em></strong>, hereafter referred to as <em>CDNs</em>, are interconnected systems of cache servers that can deliver content to users based on their physical, geographical location on Earth<sup><a href="#fn1" id="ref1" class="reference">1</a></sup>. A <em>cache server</em> is essentially a server that intelligently saves copies web pages, documents, videos, and other media locally<sup><a href="#fn2" id="ref2" class="reference">2</a></sup> such that the data can be accessed from closer proximity and more quickly, whilst also reducing bandwidth, server load and ‘lag’<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
+          </p>
+
+<figure class="figure">
+  <img src="assets/img/cacheserverdiagram.gif" class="figure-img img-fluid img-rounded" alt="A diagram of how a cache server works.">
+  <figcaption class="figure-caption">Simple diagram illustrating the use of a cache server<sup><a href="#fn4" id="ref4" class="reference">4</a></sup>.</figcaption>
+</figure>
+
+          <p>
+          This is because requests to a remote server are not needed as much as usual; the files stored on the cache server are updated infrequently and so retrieving the information is not as expensive or time consuming as asking the remote server for the file every time<sup><a href="#fn5" id="ref5" class="reference">5</a></sup>.
+          </p>
+
+          <hr>
+
+          <h3>Table of Contents</h3>
+
+          <p>
+
+            <ol>
+              <li>
+                <a href="index.html">Introduction</a>
+                <ol>
+                  <li><a href="#">History of CDNs</a></li>
+                  <li><a href="#">Pros and Cons of CDNs</a></li>
+                  <li><a href="#">CDN Alternatives</a></li>
+                </ol>
+              </li>
+              <li><a href="history.html">Deployment History</a></li>
+              <li>
+                <a href="components.html">Architecture</a>
+                <ol>
+                  <li><a href="components.html">Components</a></li>
+                  <li><a href="requestrouting.html">Request Routing</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="whatistopology.html">Topology</a>
+                <ol>
+                  <li><a href="whatistopology.html">What is Topology?</a></li>
+                  <li><a href="cdntopology.html">CDN Topology</a></li>
+                </ol>
+              </li>
+              <li><a href="aboutus.html">About Us</a></li>
+            </ol>
+
+          </p>
+
+          <br>
+          <p>When the first request for the file <strong>foo.png</strong> is sent, the request is first sent through the surrogate server. However, the surrogate server currently does not contain the file <strong>foo.png</strong>, so the request is pushed to the origin server. The file <strong>foo.png</strong> is retrieved and sent back to the user, storing the data for the file in the surrogate server in the process. Due to the caching that occurs, the second and subsequent requests for the same file will stop and retrieve the cached image from the surrogate server.</p>
+
+
+
         </div>
       </div>
+
       <hr>
+
       <div class="row">
-        <div class="col-md-3">
-          <h3><div class="flag"><img src="assets/img/flags/uk.png" alt="UK Flag" /></div> Thomas Bower</h3>
-          <p class="profilepic"><img src="assets/img/faces/tb1215new.jpg" alt="Thomas Bower" /></p>
-          <p><strong>Thomas Bower</strong> is the leader of group one and worked on the website, as well as x, y, and z.</p>
-          <p>Among other things, blah blah blah this is some simple filler text. Nunc consequat eget diam in mollis. Vestibulum mattis orci odio, eget lacinia sapien consectetur at.</p>
-          <p>
-            <ul class="social">
-              <li class="li"><a href="https://uk.linkedin.com/in/thomasabower" target="_blank">LinkedIn</a></li>
-              <li class="icl"><a href="http://thomasbower.net" target="_blank">Website</a></li>
-              <li class="email"><a href="mailto:tb1215@ic.ac.uk" target="_blank">Email</a></li>
-            </ul>
-          </p>
-          <!--<p><a class="btn btn-default" href="#" role="button">View Github &raquo;</a></p>-->
-        </div>
-        <div class="col-md-3">
-          <h3><div class="flag"><img src="assets/img/flags/uk.png" alt="UK Flag" /></div>Tanmay Khanna</h3>
-          <p class="profilepic"><img src="assets/img/faces/tanmay.jpg" alt="Tanmay Khanna" /></p>
-          <p><strong>Tanmay Khanna</strong>, praesent vulputate justo non elementum molestie also a great help in writing the pages about i and.</p>
-          <p>In his free time, he can be found doing x or nunc consequat eget diam in mollis. Vestibulum mattis orci odio, eget. More filler text here.</p>
-          <p>
-            <ul class="social">
-              <li class="li"><a href="https://uk.linkedin.com/in/tanmaykhanna" target="_blank">LinkedIn</a></li>
-              <li class="email"><a href="mailto:tk915@ic.ac.uk" target="_blank">Email</a></li>
-            </ul>
-          </p>
-          <!--<p><a class="btn btn-default" href="#" role="button">View Github &raquo;</a></p>-->
-        </div>
-        <div class="col-md-3">
-          <h3><div class="flag"><img src="assets/img/flags/russia.png" alt="Russian flag" /></div>Ali Yepifanova</h3>
-          <p class="profilepic"><img src="assets/img/faces/placeholder.png" alt="Ali Yepifanova" /></p>
-          <p><strong>Ali Yepifanova</strong> is lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum rhoncus odio, id sagittis nisl pulvinar pretium. Pellentesque gravida est vitae dolor facilisis facilisis.i</p>
-          <p>Morbi iaculis nunc sit amet lectus malesuada vestibulum. Praesent vulputate justo non elementum molestie.</p>
-          <p>
-            <ul class="social">
-              <li class="fb"><a href="https://www.facebook.com/ali.yepifanova" target="_blank">Facebook</a></li>
-              <li class="email"><a href="mailto:ay1013@ic.ac.uk" target="_blank">Email</a></li>
-            </ul>
-          </p>
-          <!--<p><a class="btn btn-default" href="#" role="button">View Github &raquo;</a></p>-->
-        </div>
-        <div class="col-md-3">
-          <h3><div class="flag"><img src="assets/img/flags/china.png" src="Chinese flag" /></div>Michelle Zhao</h3>
-          <p class="profilepic"><img src="assets/img/faces/michelle1.jpg" alt="Michelle Zhao" /></p>
-          <p><strong>Michelle Zhao</strong> is Nullam sit amet ante quis lacus dapibus aliquet. Curabitur sed metus magna. Integer et ante est. Nullae, at dignissim risus faucibus.consequat eget diam in mollis. Vestibulum mattis orci odio, eget lacinia sapien consectetur at.
-          <p>Nunc consequat eget diam in mollis. Vestibulum mattis orci odio, eget lacinia sapien consectetur at.</p>
-          <p>
-            <ul class="social">
-              <li class="li"><a href="https://www.linkedin.com/in/michelle-zhao-38b62b10b" target="_blank">LinkedIn</a></li>
-              <li class="email"><a href="mailto:mz4615@ic.ac.uk" target="_blank">Email</a></li>
-            </ul>
-          </p>
-          <!--<p><a class="btn btn-default" href="#" role="button">View Github &raquo;</a></p>-->
+        <div class="col-md-12">
+          <hr>
+
+          <p>This page was written by Thomas Bower.</p>
         </div>
       </div>
 
@@ -163,10 +163,10 @@
           </div>
         </p>
       </footer>
-    </div> <!-- /container -->
 
+    </div>
 
-    <!-- Bootstrap core JavaScript
+          <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

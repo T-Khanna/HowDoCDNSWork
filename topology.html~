@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>What is Topology? &mdash; How CDNs Work</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">How CDNs Work</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+
+            <!-- Dropdown menu for my webpages -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Architecture<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="components.html">Components</a></li>
+                <li><a href="requestrouting.html">Request Routing</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Here</a></li>
+            <li><a href="#">About</a></li>
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>-->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="jumbotron" id="jumbo">
+      <video autoplay loop muted>
+        <source src="assets/video/ethernet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+      <div class="container">
+        <h2 class="h1">What is Topology?</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+
+          <p>As the distributed computing system becomes widely used today, knowing the internal structure of a network helps people to understand and maintain the network efficiently.  Network topology, which extends the topology from mathematics, is used to illustrate the layout of a network, both physically and logically. The devices in network are regarded as nodes, links between them as lines, and they are connected together geometrically to indicate the configuration of the network. The way that they are connected is the <strong><em>topology</em></strong> of that network.</p>
+
+<p>Network topology can be further divided into two types: physical and logical. <em>Physical topology</em> focuses on the physical connection between the devices in a network, while <em>logical topology</em> focuses on the internal data flow regardless of the location of the devices or distances between them<sup><a href="#fn1" id="ref1" class="reference">1</a></sup>.</p>
+
+          <h3>Basic Types of Network Topology</h3>
+
+          <h4>Point-to-point</h4>
+
+<figure class="figure">
+  <img src="assets/img/pointtopoint.jpg" class="figure-img img-fluid img-rounded" alt="Point-to-point network topology" width="200">
+  <figcaption class="figure-caption">A point-to-point network.</figcaption>
+</figure>
+
+<p>A point-to-point topology is simply connecting two nodes directly.</p>
+
+
+          <h4>Bus</h4>
+
+<figure class="figure">
+  <img src="assets/img/bus.jpg" class="figure-img img-fluid img-rounded" alt="Bus network topology" width="200">
+  <figcaption class="figure-caption">A bus network.</figcaption>
+</figure>
+
+<p>All the nodes are connected to one central line (the bus) in a bus topology. Data is transmitted in both ways along the central line until the node address matches the the destination address contained in the data. If they don’t match, the data is passed to the next nodes without manipulation to ensure that it is received by the right node.</p>
+
+          <h4>Star</h4>
+
+<figure class="figure">
+  <img src="assets/img/star.jpg" class="figure-img img-fluid img-rounded" alt="Star network topology" width="200">
+  <figcaption class="figure-caption">A star network.</figcaption>
+</figure>
+
+<p>There exists a central hub which all the other nodes are directly connected to and receive datas from. This simple structure also leads to an obvious weakness, once the central hub performs poorly or even breaks down, the rest of the network will be affected.</p>
+
+          <h4>Ring</h4>
+
+<figure class="figure">
+  <img src="assets/img/ring.jpg" class="figure-img img-fluid img-rounded" alt="Ring network topology" width="200">
+  <figcaption class="figure-caption">A ring network.</figcaption>
+</figure>
+
+<p>A ring topology can be regarded as an end-to-end chain, where every nodes is either directly or indirectly connected to the others. Data is transmitted in one direction along the ring, looking for the right destination address. </p>
+
+          <h4>Mesh</h4>
+
+<figure class="figure">
+  <img src="assets/img/mesh.jpg" class="figure-img img-fluid img-rounded" alt="Mesh network topology" width="200">
+  <figcaption class="figure-caption">A mesh network.</figcaption>
+</figure>
+
+<p>There is a direct path between every pair of nodes in a fully connected mesh topology, which makes the data transmission faster by choosing the shortest path.</p>
+
+          <h4>Tree</h4>
+
+<p>A tree network combines star topology and bus topology together. It has a central cable (the bus) as the backbone, with several branches coming out of both sides, each of the branches is connected to the central hub of a star network<sup><a href="#fn2" id="ref2" class="reference">2</a></sup>.</p>
+
+          <h4>Hybrid</h4>
+
+          <p>There is a combination of at least two different physical topology structures in a hybrid topology. It is commonly used in the network with relatively large scale because of its high cost, on the other side, it combines the advantages of the topologies that are being used to make the whole network run more efficiently and stably<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.</p>
+
+
+        </div>
+      </div>
+
+          <hr>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>References</h3>
+          
+          <ol>
+          <li id="fn1">Santanu Santra , Pinaki Pratim Acharjya. A Study And Analysis on Computer Network Topology For Data Communication. <em>International Research Journal of Engineering and Technology</em>. 2015;01 88-90. Available from: <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.413.7099&rep=rep1&type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.413.7099&rep=rep1&type=pdf</a> [Accessed 28th February 2016]</li>
+          <li id="fn2">Margaret Rouse. <em>Tree Networking</em>. Available from: <a href="http://searchnetworking.techtarget.com/definition/tree-network">http://searchnetworking.techtarget.com/definition/tree-network</a> [Accessed 9th March 2016]</li>
+          <li id="fn3">ELearnSite. <em>Topology &ndash; Types of Topology</em>. <a href="http://networkingelearnsite.blogspot.com/2012/07/topology-types-of-topology-define.html">http://networkingelearnsite.blogspot.com/2012/07/topology-types-of-topology-define.html</a> [Accessed 10th March 2016]</li>
+        </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+
+          <p>All images on this page are original work. This page was written by Michelle Zhao.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>
+          <a href="http://imperial.ac.uk" class="pull-left"><img src="assets/img/iclogo.jpg" alt="Imperial College London logo" /></a>
+          <div class="pull-right text-right">
+            First Year Computing Topics Project at <a href="http://www.doc.ic.ac.uk" target="_blank">Imperial College London</a><br />
+            Contributed to by <a href="http://thomasbower.net" target="_blank" rel="author">Thomas Bower</a>, 
+                              <a href="http://www.doc.ic.ac.uk/~tk915/"  target="_blank" rel="author">Tanmay Khanna</a>, 
+                              <a href="http://www.doc.ic.ac.uk/~ay1013/" target="_blank" rel="author">Ali Yepifanova</a>, 
+                          and <a href="http://www.doc.ic.ac.uk/~mz4615/" target="_blank" rel="author">Michelle Zhao</a>
+          </div>
+        </p>
+      </footer>
+
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

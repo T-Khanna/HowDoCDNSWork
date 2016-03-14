@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Request Routing</title>
+    <title>Request Routing &mdash; How CDNs Work</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,23 +39,30 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-            
+            <li><a href="#">Home</a></li>
+            <li><a href="history.html">History</a></li>
             <!-- Dropdown menu for my webpages -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
-              aria-expanded="false">Architecture<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Architecture<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="components.html">Components</a></li>
-                <li><a href="#">Request Routing</a></li>
+                <li><a href="requestrouting.html">Request Routing</a></li>
               </ul>
             </li>
 
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Here</a></li>
-            <li><a href="#">About</a></li>
+            <!-- Dropdown menu for my webpages -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 Topology<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="whatistopology.html">What is Topology?</a></li>
+                <li><a href="cdntopology.html">CDN Topology</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">About Us</a></li>
           </ul>
-        </div>
+        </div><!-- /.navbar-collapse -->
       </div>
     </nav>
 
@@ -72,8 +79,8 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <p style="text-align:center"> <img src="assets/img/cdn_request_routing.JPG" width="700"> </p>
-          <p>The above image<sup><a href="#fn1" id="ref1" class="reference">1</a></sup> shows the general reqeust routing system. The main part of the system that differs between content distribution networks is the <strong>selection algorithm</strong>. As implied by the name, this decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two general schemes:
+          <p style="text-align:center" class="diagram"> <img src="assets/img/cdn_request_routing.JPG" width="700"> </p>
+          <p>The above image<sup><a href="#fn1" id="ref1" class="reference">1</a></sup> shows the general reqeust routing system. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em>. As implied by the name, this decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two general schemes:
             <ol>
               <li>Active Schemes (with per-request monitoring).
               <li>Passive Schemes (with routing tables).
@@ -99,7 +106,7 @@
           <h3>Passive Scheme Routing</h3>
           <p>Passive Schemes involve using a table which maps each request sent by a user to the appropriate surrogate server. There is no evaluation of the parameters mentioned in active schemes. An example of the mappings in a routing table is shown below<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
           <br>
-          <table border="1" width="400" align="center">
+          <table align="center" class="table">
             <tr>
               <th>Client Location</th>
               <th>Surrogate Server</th>
@@ -135,10 +142,18 @@
         <div class="col-md-12">
           <h3>References</h3>
           <ol id="reflist">
-            <li id="fn1">Mukaddim Pathan.<i>Content Delivery Network (CDN) Research Directory</i> Available from: http://www.cloudbus.org/cdn/RD/CDNs.html. [Accessed: 7th March 2016].
-            <li id="fn2">Stef Van Der Ziel. <i>Multi CDN: Active Request Routing</i>. Available from: https://www.streamzilla.com/multi-cdn-active-request-routing. [Accessed: 10th March 2016].
-            <li id="fn3">Dinesh C. Verma. Selecting the Right Site in a CDN <b>In:</b> <i>Content Distribution Networks – An Engineering Approach</i>. Wiley Interscience. 2002.
+            <li id="fn1">Mukaddim Pathan.<em>Content Delivery Network (CDN) Research Directory</em>. Available from: <a href="http://www.cloudbus.org/cdn/RD/CDNs.html" target="_blank">http://www.cloudbus.org/cdn/RD/CDNs.html</a>. [Accessed: 7th March 2016].
+            <li id="fn2">Stef Van Der Ziel. <em>Multi CDN: Active Request Routing</em>. Available from: <a href="https://www.streamzilla.com/multi-cdn-active-request-routing" target="_blank">https://www.streamzilla.com/multi-cdn-active-request-routing</a>. [Accessed: 10th March 2016].
+            <li id="fn3">Dinesh C. Verma. Selecting the Right Site in a CDN <strong>In:</strong> <em>Content Distribution Networks – An Engineering Approach</em>. Wiley Interscience. 2002.
           </ol>  
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+
+          <p>This page was written by Tanmay Khanna.</p>
         </div>
       </div>
 
