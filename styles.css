@@ -150,7 +150,6 @@ p {
   transition: all 0.2s ease-in-out;
 }
 
-<<<<<<< HEAD
 li[id^=fn] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -178,9 +177,8 @@ li[id^=fn].flash {
     5%   {background-color: yellow;}
     100% {background-color: default;}
 }
-=======
+
 .highlightrow {
   background-color: #4CAF50;
   color: white;
 }
->>>>>>> ec7446780d02694cdab724bdda889edff3b79618
