@@ -72,8 +72,8 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <p style="text-align:center"> <img src="assets/img/cdn_request_routing.JPG" width="700"> </p>
-          <p>The above image<sup><a href="#fn1" id="ref1" class="reference">1</a></sup> shows the general reqeust routing system. The main part of the system that differs between content distribution networks is the <strong>selection algorithm</strong>. As implied by the name, this decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two general schemes:
+          <p style="text-align:center" class="diagram"> <img src="assets/img/cdn_request_routing.JPG" width="700"> </p>
+          <p>The above image<sup><a href="#fn1" id="ref1" class="reference">1</a></sup> shows the general reqeust routing system. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em>. As implied by the name, this decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two general schemes:
             <ol>
               <li>Active Schemes (with per-request monitoring).
               <li>Passive Schemes (with routing tables).
@@ -99,7 +99,7 @@
           <h3>Passive Scheme Routing</h3>
           <p>Passive Schemes involve using a table which maps each request sent by a user to the appropriate surrogate server. There is no evaluation of the parameters mentioned in active schemes. An example of the mappings in a routing table is shown below<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
           <br>
-          <table border="1" width="400" align="center">
+          <table align="center">
             <tr>
               <th>Client Location</th>
               <th>Surrogate Server</th>
@@ -135,9 +135,9 @@
         <div class="col-md-12">
           <h3>References</h3>
           <ol id="reflist">
-            <li id="fn1">Mukaddim Pathan.<i>Content Delivery Network (CDN) Research Directory</i>. Available from: http://www.cloudbus.org/cdn/RD/CDNs.html. [Accessed: 7th March 2016].
-            <li id="fn2">Stef Van Der Ziel. <i>Multi CDN: Active Request Routing</i>. Available from: https://www.streamzilla.com/multi-cdn-active-request-routing. [Accessed: 10th March 2016].
-            <li id="fn3">Dinesh C. Verma. Selecting the Right Site in a CDN <b>In:</b> <i>Content Distribution Networks – An Engineering Approach</i>. Wiley Interscience. 2002.
+            <li id="fn1">Mukaddim Pathan.<em>Content Delivery Network (CDN) Research Directory</em>. Available from: <a href="http://www.cloudbus.org/cdn/RD/CDNs.html" target="_blank">http://www.cloudbus.org/cdn/RD/CDNs.html</a>. [Accessed: 7th March 2016].
+            <li id="fn2">Stef Van Der Ziel. <em>Multi CDN: Active Request Routing</em>. Available from: <a href="https://www.streamzilla.com/multi-cdn-active-request-routing" target="_blank">https://www.streamzilla.com/multi-cdn-active-request-routing</a>. [Accessed: 10th March 2016].
+            <li id="fn3">Dinesh C. Verma. Selecting the Right Site in a CDN <strong>In:</strong> <em>Content Distribution Networks – An Engineering Approach</em>. Wiley Interscience. 2002.
           </ol>  
         </div>
       </div>
