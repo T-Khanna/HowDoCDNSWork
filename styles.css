@@ -149,3 +149,8 @@ nav {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+
+.highlightrow {
+  background-color: #4CAF50;
+  color: white;
+}

@@ -79,9 +79,7 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <p>There are many components in CDNs which make up the architecture for the CDN. These components are introduced with the sole purpose of minimising Round-Trip Time, or RTT, 'which is the number of milliseconds it takes for a browser to send a request and receive a response back from a server.' Round-Trip Time is dependent on many factors, the most interesting one being the physical distance between the user and the server<sup><a href="#fn1" id="ref1" class="reference">1</a></sup>.
-
-          This relates to the topology discussion within CDN techonology, which is a major architectural question when developing a CDN service.
+          <p>There are many components in CDNs which make up the architecture for the CDN. These components are introduced with the sole purpose of minimising Round-Trip Time, or RTT, 'which is the number of milliseconds it takes for a browser to send a request and receive a response back from a server.'<sup><a href="#fn1" id="ref1" class="reference">1</a></sup> Round-Trip Time is dependent on many factors, the most interesting one being the physical distance between the user and the server. This relates to the topology discussion within CDN techonology, which is a major architectural question when developing a CDN service.
           </p>
           <p>
           In order to minimise the Round-Trip Time, every CDN has at least these components in place:
@@ -93,16 +91,21 @@
           </p>
 
           <h3>Origin Server</h3>
+          <a name="cdnservers"></a>
           <p>This is simply the server which originally contained the information the user is trying to access. The information from here is replicated into the CDN's surrogate/edge cache servers.<sup><a href="#fn2" id="ref2" class="reference">2</a></sup>. The image below demonstrates how the process works<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.</p>
+
+
 
 <figure class="figure">
   <img src="assets/img/originserver.png" class="figure-img img-fluid img-rounded" alt="A diagram of how an origin server works.">
 </figure>
-          <p>When the first request for the file <strong>foo.png</strong> is sent, the request is first sent through the surrogate server. However, the surrogate server currently does not contain the file <strong>foo.png</strong>, so the request is pushed to the origin server. The file <strong>foo.png</strong> is retrieved and sent back to the user, storing the data for the file in the surrogate server in the process. Due to the caching that occurs, the second and subsequent requests for the same file will stop and retrieve the cached image from the surrogate server<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
+          <p>When the first request for the file <strong>foo.png</strong> is sent, the request is first sent through the surrogate server. However, the surrogate server currently does not contain the file <strong>foo.png</strong>, so the request is pushed to the origin server. The file <strong>foo.png</strong> is retrieved and sent back to the user, storing the data for the file in the surrogate server selected by the request routing mechanism. Due to the caching that occurs, the second and subsequent requests for the same file will stop and retrieve the cached image from the chosen surrogate server<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
           </p>
 
           <h3>Surrogate Servers</h3>
           <p>These are the servers which stores the data accessed from the first request to the origin server. Sometimes called as edge servers, they are used as an alternative for users to access their data, as sending requests to the origin server from all over the world would prove to be problematic. As such, these are used to 'improve user experience and lower transmission costs'<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>. How they are used when processing requests can be seen above in the image illustrating the process of requesting the file <strong>foo.png</strong>.</p>
+
+          <p>The next question to address is, how do we identify which surrogate server the request should be directed to? Well, through the main request routing methods that are mentioned <a href="requestrouting.html">here</a>, in both methods, we are keeping track of the distance between the user and each surrogate server. As such, we choose to redirect the request to the surrogate server that is closest to the user, i.e. the surrogate server with the lowest metric distance from the client location.</p>
 
           <h3>Request Routing</h3>
           <p>A request routing mechanism is used to direct the user's request to the surrogate server, or set of servers, which is closest to the location of the user. This allows the user to obtain the requested content in minimal time<sup><a href="#fn4" id="ref4" class="reference">4</a></sup>. This is the method used to send the request to the surrogate server, if the server has the data from the origin server. For more information on Request Routing, <a href="requestrouting.html">click here</a>.
