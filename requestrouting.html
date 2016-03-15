@@ -94,7 +94,7 @@
               <li> The request is forwarded to the appropriate surrogate server.
               <li> The chosen surrogate server then serves the remainder of the client's request and 'caches it for subsequent request servicing'<sup><a href="#fn1" id="ref1" class="reference">1</a></sup>.   
             </ol>
-          Steps 1 and 2 only occur during the first request sent. Subsequent requests are dealt with solely by the surrogate server. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em>. This is not shown in the diagram but it is integral to the design of a CDN. As implied by the name, the selection algorithm decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two schemes:
+          Steps 1 and 2 only occur during the first request sent. Subsequent requests are dealt with solely by the surrogate server. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em>. As implied by the name, the selection algorithm decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two schemes:
             <ol>
               <li>Active Schemes (with per-request monitoring).
               <li>Passive Schemes (with routing tables).
