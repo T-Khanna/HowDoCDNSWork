@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>CDN Topology &mdash; How CDNs Work</title>
+    <title>Case Studies &mdash; How CDNs Work</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@
         <source src="assets/video/ethernet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
       </video>-->
       <div class="container">
-        <h2 class="h1">CDN Topology</h2>
+        <h2 class="h1">Case Studies</h2>
       </div>
     </div>
 
@@ -81,42 +81,33 @@
       <div class="row">
         <div class="col-md-12">
 
-          <p>One issue that should be considered before building a CDN is how densely the servers should be distributed. The choice of CDN topology &ndash; the distribution of CDN servers &ndash; will lead to differences in performance. The two main approaches nowadays are the co-location approach and the network-core approach<sup><a href="#fn1" id="ref1" class="reference">1</a></sup>. The servers of a CDN following the former approach are widely scattered geographically, while the latter are consolidated.</p>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-
-          <h3>Scattered CDN</h3>
-
-<figure class="figure">
-  <img src="assets/img/scattered.png" class="figure-img img-fluid img-rounded" alt="Scattered Network">
-  <figcaption class="figure-caption">A scattered network<sup><a href="#fn2" id="ref2" class="reference">2</a></sup>.</figcaption>
+<figure class="figure pull-right">
+  <img src="assets/img/cloudfront.jpg" class="figure-img img-fluid img-rounded" width="100" alt="CloudFront logo">
+  <figcaption class="figure-caption">CloudFront logo<sup><a href="#fn5" id="ref5" class="reference">5</a></sup>.</figcaption>
 </figure>
 
-          <p>A scattered CDN usually has a large number of surrogate servers distributed pervasively around the target area, with each of them having a relatively low capacity, the proximity to the end-users is therefore maximised<sup><a href="#fn2" id="ref2" class="reference">2</a></sup>.
-One of the biggest CDN providers, Akamai, has a highly scattered CDN network. It claims to cover 110 countries with 200,000 servers within over 1,400 networks<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.</p>
 
-        </div>
-        <div class="col-md-6">
+          <h3>Amazon CloudFront</h3>
 
-          <h3>Consolidated CDN</h3>
+          <p>Amazon launched CloudFront in 2008 as their answer to existing CDN services like Akamai and Limelight<sup><a href="#fn1" id="ref1" class="reference">1</a></sup>. CloudFront has servers located in Europe, Asia, Australia, South America, and the United States. The map below shows where CloudFront’s edge servers are located.</p>
 
 <figure class="figure">
-  <img src="assets/img/consilidated.png" class="figure-img img-fluid img-rounded" alt="Consolidated Network">
-  <figcaption class="figure-caption">A consolidated network<sup><a href="#fn2" id="ref2" class="reference">2</a></sup>.</figcaption>
+  <img src="assets/img/amazon.png" class="figure-img img-fluid img-rounded" alt="Map of Amazon CloudFront edge server locations.">
+  <figcaption class="figure-caption">Map of Amazon CloudFront edge server locations<sup><a href="#fn4" id="ref4" class="reference">4</a></sup>.</figcaption>
 </figure>
 
-          <p>A consolidated CDN, on the contrary, has centralized and high-capacity data centres comprising thousands of servers, located in fewer places<sup><a href="#fn4" id="ref4" class="reference">4</a></sup>. Companies like Limelight and AT&T use this approach and they believe this will lead to a better performance overall<sup><a href="#fn1" id="ref1" class="reference">1</a></sup>.</p>
+<p>Notice how the servers are positioned specifically in areas with good connectivity to the internet. ‘Hubs’ include East Asia, Western Europe, and the USA - these are all areas with high internet usage<sup><a href="#fn2" id="ref2" class="reference">2</a></sup>. In total, Amazon operates 52 edge servers.</p>
 
+<p>CloudFront provide higher performance with algorithms that cache copies of the most popular files. It also ensures that the users are serviced by the closest available edge location with that file<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>. Another way Amazon manages to keep speeds fast and latency low is by having persistent connections open with their origin servers. This means that if the edge server doesn’t contain the required file, then it can still be fetched relatively quickly from one of the origin servers<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.</p>
+
+<p>CloudFront is one of the newer generations of CDNs in that it is optimised for not just static content, but video streaming, file downloading, amongst other things.</p>
 
         </div>
       </div>
 
 <nav>
   <ul class="pager">
-    <li class="previous"><a href="whatistopology.html"><span aria-hidden="true">&larr;</span> What is Topology?</a></li>
+    <li class="previous"><a href="cdntopology.html"><span aria-hidden="true">&larr;</span> CDN Topology?</a></li>
     <li class="next"><a href="aboutus.html">About Us <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
@@ -128,12 +119,11 @@ One of the biggest CDN providers, Akamai, has a highly scattered CDN network. It
           <h3>References</h3>
           
           <ol>
-          <li id="fn1">Sipat Triukose, Zhihua Wen, Michael Rabinovich. <em>Content Delivery Networks: How Big is Big Enough?</em>, Case Western Reserve University. 2009. Available from: <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.153.7181&rep=rep1&type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.413.7099&rep=rep1&type=pdf</a> [Accessed 28th February 2016]</li>
-          <li id="fn2">Incapsula. <em>The Essential CDN Guide | CDN Infrastructure</em>. Available from: <a href="https://www.incapsula.com/cdn-guide/cdn-architecture.html
-">https://www.incapsula.com/cdn-guide/cdn-architecture.html
-</a> [Accessed 2nd March 2016]</li>
-          <li id="fn3">Akamai. <em>About Akamai | Facts and Figures</em>. Available from: <a href="https://www.akamai.com/us/en/about/facts-figures.jsp">https://www.akamai.com/us/en/about/facts-figures.jsp</a> [Accessed 2nd March 2016]</li>
-          <li id="fn4">Sipat Triukose, Zhihua Wen, Michael Rabinovich. <em>Measuring a Commercial Content Delivery Network</em>, Case Western Reserve University. 2011. Available from: <a href="http://wwwconference.org/proceedings/www2011/proceedings/p467.pdf">http://wwwconference.org/proceedings/www2011/proceedings/p467.pdf</a> [Accessed 28th February 2016]</li>
+          <li id="fn1">Amazon CloudFront. <em>Amazon CloudFront Details</em>. Available from: <a href="http://aws.amazon.com/cloudfront/details/">http://aws.amazon.com/cloudfront/details/</a> [Accessed 15th March 2016]</li>
+          <li id="fn2">Internet World Stats. <em>Top 20 Internet Countries</em>. Available from: <a href="http://www.internetworldstats.com/top20.htm">http://www.internetworldstats.com/top20.htm</a> [Accessed 15th March 2016]</li>
+          <li id="fn3">Amazon CloudFront. <em>Amazon CloudFront FAQ</em>. Available from: <a href="https://aws.amazon.com/cloudfront/faqs/">https://aws.amazon.com/cloudfront/faqs/</a> [Accessed 15th March 2016]</li>
+          <li id="fn4">MindCentric. <em>Map of Amazon CloudFront edge server locations</em>. Available from: <a href="http://mindcentric.com/cloud-products/content-delivery-network/">http://mindcentric.com/cloud-products/content-delivery-network/</a> [Accessed 15th March 2016]</li>
+          <li id="fn5">Amazon. <em>CloudFront logo</em>. Available from: <a href="https://aws.amazon.com/cloudfront/">https://aws.amazon.com/cloudfront/</a> [Accessed 15th March 2016]</li>
         </ol>
         </div>
       </div>
@@ -142,7 +132,7 @@ One of the biggest CDN providers, Akamai, has a highly scattered CDN network. It
         <div class="col-md-12">
           <hr>
 
-          <p>This page was written by Michelle Zhao.</p>
+          <p>This page was written by Thomas Bower and Michelle Zhao.</p>
         </div>
       </div>
 

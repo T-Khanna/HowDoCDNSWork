@@ -35,11 +35,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">How CDNs Work</a>
+          <a class="navbar-brand" href="index.html">How CDNs Work</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="history.html">History</a></li>
             <!-- Dropdown menu for my webpages -->
             <li class="dropdown">
@@ -60,6 +60,7 @@
                 <li><a href="cdntopology.html">CDN Topology</a></li>
               </ul>
             </li>
+            <li><a href="casestudies.html">Case Studies</a></li>
             <li><a href="aboutus.html">About Us</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -67,9 +68,9 @@
     </nav>
 
     <div class="jumbotron" id="jumbo">
-      <video autoplay loop muted>
+      <!--<video autoplay loop muted>
         <source src="assets/video/ethernet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-      </video>
+      </video>-->
       <div class="container">
         <h2 class="h1">Request Routing Systems</h2>
       </div>
@@ -79,8 +80,7 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <p style="text-align:center" class="diagram"> <img src="assets/img/cdn_request_routing.JPG" width="700"> </p>
-          <p>The above image<sup><a href="#fn1" id="ref1" class="reference">1</a></sup> shows the general reqeust routing system. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em>. As implied by the name, this decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two general schemes:
+          <p>The image <a href="components.html#cdnservers">here</a> (click on the image to return back to this page) shows the general request routing system. The main part of the system that differs between content distribution networks is the <em>selection algorithm</em><sup><a href="#fn1" id="ref1" class="reference">1</a></sup>. This is not shown in the diagram but it is integral to the design of a CDN. As implied by the name, the selection algorithm decides which surrogate server the request should be directed to. There are many different types of techniques used for implementing the sorting algorithm. In general they fall into one of two schemes:
             <ol>
               <li>Active Schemes (with per-request monitoring).
               <li>Passive Schemes (with routing tables).
@@ -92,19 +92,98 @@
       <div class="row">
         <div class="col-md-12">
           <h3>Active Scheme Routing</h3>
-          <p>In Active Schemes, with active request routing, each initial end user request for a live or VOD stream is sent to a pool of request routers. These routers analyse each individual request. Over a dozen parameters are checked:
+          <p>In Active Schemes, with active request routing, each initial end user request for a live or VOD stream is sent to a pool of request routers. These routers analyse each individual request. Over a dozen parameters are checked:</p>
           <ul>
-            <li> Where are you? 
+            <li> Where is the user?
             <li> Does this content exist? 
-            <li> Which delivery node has the best score to deliver this content for you? 
+            <li> Which surrogate server is the closest, in terms of metric distance, to the user? 
           </ul>
-          These examples of parameters are only to name a few. All these parameters are checked within the space of a millisecond.<sup><a href="#fn2" id="ref2" class="reference">2</a></sup> This form of routing is not very common in Internet Architecture as it is less efficient and provides no significant benefit when compared to Passive Scheme Routing.
+          <p>These examples of parameters are only to name a few. All these parameters are checked within the space of a millisecond.<sup><a href="#fn2" id="ref2" class="reference">2</a></sup> This form of routing is not very common in Internet Architecture as it is less efficient and provides no significant benefit when compared to Passive Scheme Routing.
           </p>
         </div>
 
         <div class="col-md-12">
           <h3>Passive Scheme Routing</h3>
-          <p>Passive Schemes involve using a table which maps each request sent by a user to the appropriate surrogate server. There is no evaluation of the parameters mentioned in active schemes. An example of the mappings in a routing table is shown below<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
+          <p>Passive Schemes involve using a table which maps each request sent by a user to the appropriate surrogate server. There is no evaluation of the parameters mentioned in active schemes. First we obtain what is called a routing information matrix, which is just a table that provides the distance between each user and each surrogate server in question. An example can be seen below<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
+
+          <table align="center" class="table">
+            <tr>
+              <th>Client Location</th>
+              <th>Surrogate Server</th>
+              <th>Distance Metric</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td>Europe</td>
+                <td>New York</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>Europe</td>
+                <td>Paris</td>
+                <td class="highlightrow">30</td>
+              </tr>
+              <tr>
+                <td>Europe</td>
+                <td>New Delhi</td>
+                <td>160</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>America</td>
+                <td>New York</td>
+                <td class="highlightrow">30</td>
+              </tr>
+              <tr>
+                <td>America</td>
+                <td>Paris</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>America</td>
+                <td>New Delhi</td>
+                <td>200</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>Asia</td>
+                <td>New York</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td>Asia</td>
+                <td>Paris</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td>Asia</td>
+                <td>New Delhi</td>
+                <td class="highlightrow">60</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>Africa</td>
+                <td>New York</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td>Africa</td>
+                <td>Paris</td>
+                <td class="highlightrow">100</td>
+              </tr>
+              <tr>
+                <td>Africa</td>
+                <td>New Delhi</td>
+                <td>120</td>
+              </tr>
+            </tbody>
+          </table>
+          </p> 
+
+          <p>The highlighted cells have the lowest distance metric for their respective client location. As such, the client location is now mapped to the surrogate server in these rows, in order to provide the user with the minimal round-trip time. An example of the mappings in a routing table is shown below<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.</p>
           <br>
           <table align="center" class="table">
             <tr>
@@ -129,12 +208,19 @@
             </tr>
           </table>
           <br>
-          So, in this example, if the client location was America, the mapping in the passive scheme table would choose the surrogate server in New York. </p>
-          <p>In the context of the Internet, requests are identified by their IP addresses. As such, this scheme is favoured over the active scheme for the Internet. Trying to implement an active web-based CDN introduces a large number of parameters to think about, especially if the parameters have to be able to cover the internet. As such, the drect mapping from client location to surrogate server is preferred as it reduces the complexity of the system.</p>
-          <hr>
+          <p>So, in this example, if the client location was America, the mapping in the passive scheme table would choose the surrogate server in New York. </p>
+          <p>In the context of the Internet, requests are identified by their IP addresses. As such, this scheme is favoured over the active scheme for the Internet. Trying to implement an active web-based CDN introduces a large number of parameters to think about, especially if the parameters have to be able to cover the internet. As a result, the direct mapping from client location to surrogate server is preferred as it reduces the complexity of the system.</p>
         </div>
       </div>
-    </div>
+
+<nav>
+  <ul class="pager">
+    <li class="previous"><a href="components.html"><span aria-hidden="true">&larr;</span> Components</a></li>
+    <li class="next"><a href="whatistopology.html">What is Topology? <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+
+    <hr />
 
     <!-- References -->
     <div class="container">
@@ -185,5 +271,6 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

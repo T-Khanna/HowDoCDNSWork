@@ -67,9 +67,9 @@
     </nav>
 
     <div class="jumbotron" id="jumbo">
-      <video autoplay loop muted>
+      <!--<video autoplay loop muted>
         <source src="assets/video/ethernet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-      </video>
+      </video>-->
       <div class="container">
         <h2 class="h1">Deployment History</h2>
       </div>
@@ -101,6 +101,13 @@
         </div>
       </div>
 
+<nav>
+  <ul class="pager">
+    <li class="previous"><a href="index.html"><span aria-hidden="true">&larr;</span> Home</a></li>
+    <li class="next"><a href="components.html">Components <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+
           <hr>
 
       <div class="row">
@@ -113,7 +120,7 @@
           <li id="fn3">Goran Čandrlić - The History of Content Delivery Networks. <em>Globaldots</em>. Available from: <a href="http://www.globaldots.com/the-history-of-content-delivery-networks-cdn/">http://www.globaldots.com/the-history-of-content-delivery-networks-cdn/</a> [Accessed 20th February 2016]</li>
           <li id="fn4">Bourreau M, Cambini C, Doğan P. Access regulation and the transition from copper to fiber networks in telecoms. <em>Journal of Regulatory Economics</em>. 2014;45(3): 233-258. Available from: doi:10.1007/s11149-014-9245-z [Accessed 1st March 2016]</li>
           <li id="fn5">NTT Communications. <em>The Value of a CDN</em>. Available from: <a href="http://www.us.ntt.net/downloads/papers/The_Value_of_a_CDN_2010.pdf">http://www.us.ntt.net/downloads/papers/The_Value_of_a_CDN_2010.pdf</a> [Accessed 9th March 2016]</li>
-          <li id="fn6">Dan Rayburn - How Mobile Acceleration Works: An Inside Look At Cotendo’s Newly Announced Service. <em>StreamingMedia</em>. Weblog. Available from: <a href="http://blog.streamingmedia.com/2011/06/how-mobile-acceleration-works-an-inside-look-at-cotendos-newly-announced-service.html">http://blog.streamingmedia.com/2011/06/how-mobile-acceleration-works-an-inside-look-at-cotendos-newly-announced-service.html</a> [accessed 9th March 2016]</li>
+          <li id="fn6">Dan Rayburn - How Mobile Acceleration Works: An Inside Look At Cotendo’s Newly Announced Service. <em>StreamingMedia</em>. Weblog. Available from: <a href="http://blog.streamingmedia.com/2011/06/how-mobile-acceleration-works-an-inside-look-at-cotendos-newly-announced-service.html">http://blog.streamingmedia.com/2011/06/how-mobile-acceleration-works-an-inside-look-at-cotendos-newly-announced-service.html</a> [Accessed 9th March 2016]</li>
         </ol>
         </div>
       </div>
@@ -150,5 +157,6 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

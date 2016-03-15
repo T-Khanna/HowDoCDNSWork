@@ -35,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">How CDNs Work</a>
+          <a class="navbar-brand" href="index.html">How CDNs Work</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
@@ -67,9 +67,9 @@
     </nav>
 
     <div class="jumbotron" id="jumbo">
-      <video autoplay loop muted>
+      <!--<video autoplay loop muted>
         <source src="assets/video/ethernet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-      </video>
+      </video>-->
       <div class="container">
         <h2 class="h1">What is Topology?</h2>
       </div>
@@ -141,7 +141,7 @@
         </div>
         <div class="col-md-8">
           <h4>Star</h4>
-<p>There exists a central hub which all the other nodes are directly connected to and receive datas from. This simple structure also leads to an obvious weakness, once the central hub performs poorly or even breaks down, the rest of the network will be affected.</p>
+<p>There exists a central hub which all the other nodes are directly connected to and receive data from. This simple structure also leads to an obvious weakness, once the central hub performs poorly or even breaks down, the rest of the network will be affected.</p>
 
         </div>
       </div>
@@ -159,7 +159,7 @@
         </div>
         <div class="col-md-8">
           <h4>Ring</h4>
-<p>A ring topology can be regarded as an end-to-end chain, where every nodes is either directly or indirectly connected to the others. Data is transmitted in one direction along the ring, looking for the right destination address. </p>
+<p>A ring topology can be regarded as an end-to-end chain, where every node is either directly or indirectly connected to the others. Data is transmitted in one direction along the ring, looking for the right destination address. </p>
 
         </div>
       </div>
@@ -182,6 +182,12 @@
 
       <div class="row">
         <div class="col-md-4">
+
+<figure class="figure">
+  <img src="assets/img/tree.jpg" class="figure-img img-fluid img-rounded" alt="Tree network topology" width="200">
+  <figcaption class="figure-caption">A tree network.</figcaption>
+</figure>
+
         </div>
         <div class="col-md-8">
           <h4>Tree</h4>
@@ -202,6 +208,14 @@
 
         </div>
       </div>
+
+<nav>
+  <ul class="pager">
+    <li class="previous"><a href="requestrouting.html"><span aria-hidden="true">&larr;</span> Request Routing</a></li>
+    <li class="next"><a href="cdntopology.html">CDN Topology <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+
           <hr>
 
       <div class="row">
@@ -248,5 +262,6 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
