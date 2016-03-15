@@ -92,11 +92,10 @@
           </p>
 
           <h3>Origin Server</h3>
-          <a name="cdnservers"></a>
           <p>This is simply the server which originally contained the information the user is trying to access. The information from here is replicated into the CDN's surrogate/edge cache servers.<sup><a href="#fn2" id="ref2" class="reference">2</a></sup>. The image below demonstrates how the process works<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.</p>
 
 <figure class="figure">
-  <a href="requestrouting.html"><img src="assets/img/originserver.png" class="figure-img img-fluid img-rounded" alt="A diagram of how an origin server works."></a>
+  <img src="assets/img/originserver.png" class="figure-img img-fluid img-rounded" alt="A diagram of how an origin server works.">
 </figure>
 
           <p>When the first request for the file <strong>foo.png</strong> is sent, the request is first sent through the surrogate server. However, the surrogate server currently does not contain the file <strong>foo.png</strong>, so the request is pushed to the origin server. The file <strong>foo.png</strong> is retrieved and sent back to the user, storing the data for the file in the surrogate server selected by the request routing mechanism. Due to the caching that occurs, the second and subsequent requests for the same file will stop and retrieve the cached image from the chosen surrogate server<sup><a href="#fn3" id="ref3" class="reference">3</a></sup>.
